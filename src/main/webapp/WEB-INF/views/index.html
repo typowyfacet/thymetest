@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>test</title>
+</head>
+<body>
+<h1>Spring MVC + Thymeleaf  Hello World example</h1>
+<p th:text="${message}"></p>
+
+<div th:each="product : ${productList}">
+    <div th:replace="fragments :: prodDetail (${product})"></div>
+    <hr>
+</div>
+
+</body>
+</html>
